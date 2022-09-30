@@ -18,6 +18,7 @@ function writePassword() {
 function generatePassword() {
   var password = "";
   var length = getLength();
+  getCriteria();
 }
 
 // get password length from the user
@@ -43,6 +44,34 @@ function checkLength(length) {
   }
 }
 
+function getCriteria () {
+  // if user confirms lowercase criteria
+  if (confirm("Include lowercase characters?\n(Select OK for Yes)\n(Cancel for No)") === true)
+  // the alphabet array is appended to the possibleChar array
+    possibleChar.push(...alphabet);
+  // if the user confirms uppercase criteria
+  if (confirm("Include uppercase characters?\n(Select OK for Yes)\n(Cancel for No)") === true)
+  // the capitalAlphabet array is appended to the possibleChar array
+    possibleChar.push(...capitalAlphabet);
+  // if the user confirms numbers are part of the password criteria
+  if (confirm("Include numbers?\n(Select OK for Yes)\n(Cancel for No)"))
+    // the numbers array is appended to the possibleChar array
+    possibleChar.push(...numbers);
+  // if user confirms special characters are part of the password criteria
+  if(confirm("Include Special Characters(!,@,#,...)?\n(Select OK for Yes)\n(Cancel for No)"))
+    //the specialChar array is appended to the possibleChar array
+    possibleChar.push(...specialChar);
+
+  // checks if the possibleChar array is still empty
+  if (possibleChar.length === 0 ) {
+    // throw error if empty
+    alert("Error: At least one of the criteria must be chosen");
+    // recursively call the function
+    getCriteria();
+  } else {
+    return;
+  }
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
