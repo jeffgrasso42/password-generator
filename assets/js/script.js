@@ -1,4 +1,10 @@
 // Assignment Code
+var alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+var capitalAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+var numbers = "0123456789".split("");
+var specialChar = "!?@#$%^&*()[]{}-_+=<>,./|:;`~'".split("");
+var possibleChar = [];
+var password = "";
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
