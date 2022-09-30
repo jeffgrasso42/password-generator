@@ -15,10 +15,17 @@ function writePassword() {
   passwordText.value = password;
 }
 
+// creates the password for the user based on the length and criteria input
 function generatePassword() {
   var password = "";
   var length = getLength();
   getCriteria();
+
+  for (var i = 0; i < length; i++) {
+    var charIndex = Math.floor(Math.random() * possibleChar.length);
+    password += possibleChar[charIndex];
+  }
+  return password;  
 }
 
 // get password length from the user
@@ -44,6 +51,7 @@ function checkLength(length) {
   }
 }
 
+// get desired password criteria from user
 function getCriteria () {
   // if user confirms lowercase criteria
   if (confirm("Include lowercase characters?\n(Select OK for Yes)\n(Cancel for No)") === true)
