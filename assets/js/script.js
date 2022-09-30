@@ -3,7 +3,7 @@ var alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
 var capitalAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 var numbers = "0123456789".split("");
 var specialChar = "!?@#$%^&*()[]{}-_+=<>,./|:;`~'".split("");
-var possibleChar = [];
+var possibleChar;
 var password = "";
 var generateBtn = document.querySelector("#generate");
 
@@ -53,6 +53,8 @@ function checkLength(length) {
 
 // get desired password criteria from user
 function getCriteria () {
+  // assign empty array to possible characters
+  possibleChar = [];
   // if user confirms lowercase criteria
   if (confirm("Include lowercase characters?\n(Select OK for Yes)\n(Cancel for No)") === true)
   // the alphabet array is appended to the possibleChar array
