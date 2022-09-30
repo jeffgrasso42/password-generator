@@ -37,7 +37,7 @@ function getLength() {
     return length;
   // if length is invalid, invoke getLength again
   } else {
-    alert("Error: Invalid input, try again");
+    alert("Error: " + length +  " is an invalid input, try again");
     getLength();
   }
 }
