@@ -4,17 +4,13 @@
 
 Coming up with secure passwords can be difficult, especially when working for a company that has strict password criteria and/or requires frequent password changes. This program is designed to generate secure passwords based on the parameters of the user's specific needs.
 
-## Installation
-
-N/A
-
 ## Usage
 * go to https://jeffgrasso42.github.io/password-generator/
 * press Generate Password button
 * Enter desired password length from 8 to 128
 * Select password criteria (lowercase, uppercase, number, special characters)
 * get new password from password box
-*!["password example"](assets/images/password-example.png)
+*[!["password example"](assets/images/password-example.png)](https://jeffgrasso42.github.io/password-generator/)
 
 ## Tests
 * program will not accept a password length less than 8 or greater than 128
