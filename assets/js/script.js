@@ -31,7 +31,7 @@ function generatePassword() {
 // get password length from the user
 function getLength() {
   //prompt the user for the length of the password (between 8 and 128)
-  var length = prompt("Enter desired password length (min 8, max 128): ")
+  var length = parseInt(prompt("Enter desired password length (min 8, max 128): "))
   // if checkLength() function returns true, length is valid
   if (checkLength(length)) {
     return length;
